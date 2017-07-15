@@ -30,7 +30,7 @@
 # TODO -keepclassmembers 指定的类成员被保留。
 # TODO -keepclasseswithmembers 指定的类和类成员被保留，假如指定的类成员存在的话。
 
-#忽略警告
+#忽略警告, 直接运行时as会报这句的错误
 #-ignorewarning
 -dontskipnonpubliclibraryclasses
 -dontskipnonpubliclibraryclassmembers
