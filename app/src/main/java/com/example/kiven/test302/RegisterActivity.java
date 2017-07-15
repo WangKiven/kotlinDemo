@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.kiven.test302.entity.Shop;
 import com.example.kiven.test302.entity.User;
 import com.kiven.kutils.logHelper.KLog;
 import com.kiven.kutils.tools.KAlertDialogHelper;
@@ -148,6 +149,9 @@ public class RegisterActivity extends AppCompatActivity {
         try {
             // 静态变量调用
             AppContext.Companion.getDbManager().save(user);
+
+            Shop shop = new Shop("SN9008909", "食品");
+            KLog.i(shop.getMacNum());
         } catch (DbException e) {
             e.printStackTrace();
             b = false;
