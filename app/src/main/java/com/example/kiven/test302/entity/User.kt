@@ -12,7 +12,18 @@ class User(@Column(name = "account") var account: String? = null, @Column(name =
     @Column(name = "id", isId = true)
     var id: Long? = null
 
-    constructor(account: String) : this()
-    constructor(account: String, pw: String, name: String) : this(account, pw)
-    constructor(account: String, pw: String, name: String, sex: Boolean) : this(account, pw)
+    var name:String? = null
+    constructor(account: String, pw: String, name: String) : this(account, pw){
+        this.name = name
+    }
+
+    var sex:Boolean?= false
+    constructor(account: String, pw: String, name: String, sex: Boolean) : this(account, pw, name){
+        this.sex = sex
+    }
+
+    override fun toString(): String {
+        return "User(account=$account, pw=$pw, id=$id, name=$name, sex=$sex)"
+    }
+
 }

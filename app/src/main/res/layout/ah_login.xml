@@ -55,14 +55,4 @@
         app:layout_constraintLeft_toRightOf="@id/btn_login"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@id/btn_login" />
-
-    <Button
-        android:id="@+id/btn_kotlin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="kotlin 测试"
-        android:clickable="true"
-        android:focusable="true"
-        android:onClick="onClick"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login"/>
 </android.support.constraint.ConstraintLayout>

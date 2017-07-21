@@ -61,7 +61,7 @@
 }
 
 # 保留继承自BaseEntity的类及属性
--keepclassmembers class * extends com.sxb.sxbdock.base.BaseEntity { *;}
+-keepclassmembers class * extends com.example.kiven.test302.base.BaseEntity { *;}
 # -keepclassmembers class com.example.kiven.test302.entity.User { *;}
 
 

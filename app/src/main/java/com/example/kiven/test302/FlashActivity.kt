@@ -6,10 +6,13 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
+import com.kiven.kutils.activityHelper.KFragmentActivity
 import com.kiven.kutils.tools.KAlertDialogHelper
 import com.kiven.kutils.tools.KString
 import com.kiven.kutils.tools.KToast
 import kotlinx.android.synthetic.main.activity_flash.*
+import org.jetbrains.anko.intentFor
+import org.jetbrains.anko.singleTop
 
 /**
  *
@@ -45,6 +48,15 @@ class FlashActivity : AppCompatActivity(), View.OnClickListener {
 
             btn_register -> {
                 startActivityForResult(Intent(this, RegisterActivity::class.java), 779)
+            }
+
+            btn_kotlin -> {
+                test()
+//                AHLogin().startActivity(this@FlashActivity)
+                val intent = Intent(baseContext, KFragmentActivity::class.java)
+                intent.putExtra("fragment_name", FLogin::class.java.name)
+                startActivity(intent)
+//                startActivity(intentFor<KFragmentActivity>("fragment_name" to FLogin::class.java.name).singleTop())
             }
         }
     }
